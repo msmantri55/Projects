@@ -1,4 +1,4 @@
-#include "A4_sort_helpers.h"
+#include "sort_helpers.h"
 
 int main( int argc, char *argv[] ){
 
@@ -7,10 +7,6 @@ int main( int argc, char *argv[] ){
 		return 1;
 	}
 
-    // This is the call to your initialize function. It gives you a chance
-    // to setup any variables and files you may want to use to coordinate your
-    // processes. Note that it occurs before any fork() has been called, so you
-    // know it's run in the original parent process.
 	int ret = initialize( );
 	if( ret != 0 ){
 		sprintf(buf, "ERROR: initialize returned non-zero %d.\n", ret );
@@ -36,8 +32,6 @@ int main( int argc, char *argv[] ){
 		}
 	}
 
-    // This code calls your process_by_letter 26 times, one for each small alphabet letter.
-    // Note that each call is made by a separate process.
 	if( id >= 1 && id < 27 ){
 		ret = process_by_letter( argv[1], 'a'+ id -1 );
 		if( ret != 0 ){
@@ -47,7 +41,7 @@ int main( int argc, char *argv[] ){
 		}
 	}
 
-    // This code calls your finalize function once. Note this is by the original parent.
+
 	if( id == 0 ){
 		ret = finalize( );
 		if( ret != 0 ){
