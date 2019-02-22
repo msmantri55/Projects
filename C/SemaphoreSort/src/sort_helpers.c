@@ -1,7 +1,5 @@
 #include "sort_helpers.h"
 
-// Function: read_all() 
-// Provided to read an entire file, line by line.
 
 
 sem_t *semaphores[27];
@@ -23,8 +21,6 @@ void read_all( char *filename ){
     fclose(fp);
 }
 
-// Function: read_all() 
-// Provided to read only the lines of a file staring with first_letter.
 
 void read_by_letter( char *filename, char first_letter ){
 
