@@ -178,9 +178,9 @@ public void saveDB(String fileName) {
  public static void main (String[] args) {
    // Creating a main method to test some of our created methods. 
     Twitter myTwitter = new Twitter();
-    String fileName = "C:\\Users\\alisa\\Desktop\\Assignment5_260787381\\stopWords.txt";
-    String tweetsFileName = "C:\\Users\\alisa\\Desktop\\Assignment5_260787381\\tweets.txt";
-    String sortedFileName = "C:\\Users\\alisa\\Desktop\\Assignment5_260787381\\sortedTweets.txt";
+    String fileName = "";
+    String tweetsFileName = "";
+    String sortedFileName = "";
     Tweet.loadStopWords(fileName);
     myTwitter.loadDB(tweetsFileName);
     ArrayList<Tweet> filteredTweets;
